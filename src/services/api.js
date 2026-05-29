@@ -1,4 +1,5 @@
 const BASE_URL = process.env.REACT_APP_API_URL || 'http://localhost:8000';
+console.log("BASE_URL loaded:", BASE_URL);
 const GROQ_KEY = process.env.REACT_APP_GROQ_API_KEY || '';
 const GROQ_URL = 'https://api.groq.com/openai/v1/chat/completions';
 const MODEL = 'llama-3.3-70b-versatile';
