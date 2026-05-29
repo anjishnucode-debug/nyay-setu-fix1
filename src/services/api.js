@@ -115,7 +115,8 @@ Focus on: IPC, CrPC, bail rights, undertrial rights, FIR procedures, legal aid, 
       if (!res.ok) throw new Error(`Upload failed: ${res.status}`);
       return res.json();
     } catch (e) {
-      throw new Error('PDF upload requires backend. Make sure Render is running.');
+      console.error('PDF upload error:', e);
+      throw new Error(`PDF upload failed (${e.message}). Make sure Render is running.`);
     }
   },
 
