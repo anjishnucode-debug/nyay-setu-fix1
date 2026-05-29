@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Outfit:wght@300;400;500;600&display=swap');
+
+/* ── DARK THEME (default) ────────────────────────────────────────── */
+:root, [data-theme="dark"] {
+  --bg-primary: #08091a;
+  --bg-secondary: #0d0c08;
+  --bg-green: #08120f;
+  --bg-card: rgba(255,255,255,0.02);
+  --bg-card-hover: rgba(255,255,255,0.04);
+
+  --text-primary: #e8e4d8;
+  --text-green: #d8ede6;
+  --text-secondary: rgba(232,228,216,0.5);
+  --text-muted: rgba(232,228,216,0.35);
+  --text-faint: rgba(232,228,216,0.2);
+
+  --border-gold: rgba(212,168,67,0.15);
+  --border-gold-hover: rgba(212,168,67,0.35);
+  --border-green: rgba(29,158,117,0.2);
+  --border-green-hover: rgba(29,158,117,0.4);
+  --border-subtle: rgba(255,255,255,0.06);
+
+  --gold: #d4a843;
+  --gold-dim: rgba(212,168,67,0.6);
+  --gold-faint: rgba(212,168,67,0.08);
+  --green: #1d9e75;
+  --green-dim: rgba(29,158,117,0.6);
+  --green-faint: rgba(29,158,117,0.06);
+
+  --input-bg: rgba(255,255,255,0.03);
+  --input-bg-green: rgba(29,158,117,0.06);
+  --input-bg-gold: rgba(212,168,67,0.04);
+  --input-color: #e8e4d8;
+  --input-placeholder: rgba(232,228,216,0.3);
+
+  --sidebar-bg: rgba(255,255,255,0.025);
+  --sidebar-border: rgba(212,168,67,0.08);
+
+  --stat-bar: rgba(255,255,255,0.06);
+  --divider: rgba(255,255,255,0.05);
+
+  --select-option-bg: #1a1408;
+  --select-option-bg-green: #0d2b24;
+
+  --shadow: none;
+  --toggle-bg: rgba(255,255,255,0.08);
+  --toggle-border: rgba(255,255,255,0.12);
+  --toggle-icon: '☀️';
+}
+
+/* ── LIGHT THEME ─────────────────────────────────────────────────── */
+[data-theme="light"] {
+  --bg-primary: #f5f0e8;
+  --bg-secondary: #f0ebe0;
+  --bg-green: #f0f7f4;
+  --bg-card: rgba(255,255,255,0.7);
+  --bg-card-hover: rgba(255,255,255,0.9);
+
+  --text-primary: #1a1610;
+  --text-green: #0f2a20;
+  --text-secondary: rgba(26,22,16,0.6);
+  --text-muted: rgba(26,22,16,0.45);
+  --text-faint: rgba(26,22,16,0.25);
+
+  --border-gold: rgba(180,130,30,0.25);
+  --border-gold-hover: rgba(180,130,30,0.5);
+  --border-green: rgba(20,130,90,0.25);
+  --border-green-hover: rgba(20,130,90,0.5);
+  --border-subtle: rgba(0,0,0,0.08);
+
+  --gold: #b8820a;
+  --gold-dim: rgba(184,130,10,0.7);
+  --gold-faint: rgba(184,130,10,0.08);
+  --green: #157a58;
+  --green-dim: rgba(21,122,88,0.7);
+  --green-faint: rgba(21,122,88,0.07);
+
+  --input-bg: rgba(255,255,255,0.8);
+  --input-bg-green: rgba(21,122,88,0.06);
+  --input-bg-gold: rgba(184,130,10,0.05);
+  --input-color: #1a1610;
+  --input-placeholder: rgba(26,22,16,0.35);
+
+  --sidebar-bg: rgba(255,255,255,0.6);
+  --sidebar-border: rgba(184,130,10,0.12);
+
+  --stat-bar: rgba(0,0,0,0.08);
+  --divider: rgba(0,0,0,0.06);
+
+  --select-option-bg: #f5f0e8;
+  --select-option-bg-green: #e8f5f0;
+
+  --shadow: 0 2px 12px rgba(0,0,0,0.08);
+  --toggle-bg: rgba(0,0,0,0.06);
+  --toggle-border: rgba(0,0,0,0.1);
+  --toggle-icon: '🌙';
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Outfit', sans-serif;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* Smooth theme transition on all elements */
+*, *::before, *::after {
+  transition: background-color 0.25s ease, border-color 0.25s ease, color 0.25s ease;
+}
+
+/* Override transition for animations that shouldn't be affected */
+[style*="animation"], [style*="transform"] {
+  transition: background-color 0.25s ease, border-color 0.25s ease, color 0.25s ease, transform 0.25s ease;
+}
+
+@keyframes cpulse { 0%,100%{opacity:1} 50%{opacity:0.4} }
+@keyframes spin { to { transform: rotate(360deg) } }
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); opacity: 0.4; }
+  50% { transform: translateY(-5px); opacity: 1; }
+}
